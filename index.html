@@ -326,7 +326,7 @@
                 
               
 
-              <time title="创建时间：2018-07-08 19:40:36 / 修改时间：22:15:10" itemprop="dateCreated datePublished" datetime="2018-07-08T19:40:36+08:00">2018-07-08</time>
+              <time title="创建时间：2018-07-08 19:40:36 / 修改时间：22:23:42" itemprop="dateCreated datePublished" datetime="2018-07-08T19:40:36+08:00">2018-07-08</time>
             
 
             
@@ -366,12 +366,12 @@
       
         
           
-            <p>##引言</p>
-<p>从准备毛概考试开始，就没怎么学东西，心里老压着考试这些事。</p>
+            <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>从准备毛概考试开始，就没怎么学东西，心里老压着考试这些事。</p>
 <p>没有进步，也不咋准备考试，还是内心太脆弱，心里一有事什么都不想干，太懒惰、太懒惰、这几年没有一个强大的内心。。。</p>
 <p>这礼拜嵌入式学习，<em>linux</em>下的学习，周围同学看见<em>linux</em>觉得好厉害的感觉。</p>
 <p>自己稍微会一点，觉得还是太浅了，回来好好看了看《鸟哥的<em>linux</em>私房菜》，还是有一些收获。</p>
-<h2 id="Linux文件属性"><a href="#Linux文件属性" class="headerlink" title="Linux文件属性"></a>Linux文件属性</h2><p>linux的核心，在现在的自己看来，就是权限，所有的一切都是为了多任务多进程服务的。</p>
+<p>##Linux文件属性</p>
+<p>linux的核心，在现在的自己看来，就是权限，所有的一切都是为了多任务多进程服务的。</p>
 <p>首先输入命令<code>ls -al</code>出来所有文件详细的权限和属性，包含隐藏文件<code>.*</code>。</p>
 <p>1、    第一列文件权限，首个字母代表文件类型：<code>d</code>代表目录；<code>-</code>代表文件。</p>
 <p>​    后九个分为三块，分别是<em>owner、group、others</em>，分别赋予其可读<code>r</code>、可写<code>w</code>、可执行<code>x</code>权限。</p>
@@ -383,22 +383,17 @@
 <p>6、    第六列，文件的创建日期或最后修改日期。</p>
 <p>7、    该文件名。</p>
 <h2 id="linux常用命令"><a href="#linux常用命令" class="headerlink" title="linux常用命令"></a>linux常用命令</h2><p>常用的<code>cd、cp、rm、mv</code>没啥说的，再熟悉不过了，讲一些平时接触不到的。</p>
-<p>#####ls命令：查看文件与目录</p>
-<p>​    <code>-a</code>:列出全部的文件，包括隐藏文件（<code>.</code>开头）。</p>
+<h5 id="ls命令：查看文件与目录"><a href="#ls命令：查看文件与目录" class="headerlink" title="ls命令：查看文件与目录"></a>ls命令：查看文件与目录</h5><p>​    <code>-a</code>:列出全部的文件，包括隐藏文件（<code>.</code>开头）。</p>
 <p>​    <code>-d</code>:列出目录本身，而不是列出目录内的文件数据，也就是<code>./</code>。</p>
 <p>​    <code>-l</code>:列出长数据块，包含文件属性与权限等数据。</p>
-<p>#####umask：文件默认权限</p>
-<p>​    命令行输入<em>umask</em>，一般出来的是002或者022，这个代表777减去002得到的数字就是文件的默认权限，可以直接使用<code>umask ***</code>改变新建的文件的默认权限。</p>
-<p>#####chattr和lsattr：文件隐藏属性</p>
-<p>​    <code>chattr +a</code>:设置为这个以后，只能增加数据，不能删除、修改(须<em>root</em>)。</p>
+<h5 id="umask：文件默认权限"><a href="#umask：文件默认权限" class="headerlink" title="umask：文件默认权限"></a>umask：文件默认权限</h5><p>​    命令行输入<em>umask</em>，一般出来的是002或者022，这个代表777减去002得到的数字就是文件的默认权限，可以直接使用<code>umask ***</code>改变新建的文件的默认权限。</p>
+<h5 id="chattr和lsattr：文件隐藏属性"><a href="#chattr和lsattr：文件隐藏属性" class="headerlink" title="chattr和lsattr：文件隐藏属性"></a>chattr和lsattr：文件隐藏属性</h5><p>​    <code>chattr +a</code>:设置为这个以后，只能增加数据，不能删除、修改(须<em>root</em>)。</p>
 <p>​    <code>chattr +i</code>:让文件不可删除、改名、设置连接、写入、添加数据（对系统安全帮助很大，须<em>root</em>）。</p>
 <p>​    <code>lasttr</code>:显示文件隐藏属性。</p>
-<p>#####whereis、locate、find：文件名的查找</p>
-<p>​    <code>whereis</code>:<code>-b 只找二进制格式</code>、<code>-m 只找在说明文件manual路径下的文件</code>、<code>-s 只找source源文件</code>、<code>-u 查找不在上述三个选项中的特殊文件</code></p>
+<h5 id="whereis、locate、find：文件名的查找"><a href="#whereis、locate、find：文件名的查找" class="headerlink" title="whereis、locate、find：文件名的查找"></a>whereis、locate、find：文件名的查找</h5><p>​    <code>whereis</code>:<code>-b 只找二进制格式</code>、<code>-m 只找在说明文件manual路径下的文件</code>、<code>-s 只找source源文件</code>、<code>-u 查找不在上述三个选项中的特殊文件</code></p>
 <p>​    <code>locate</code>:<code>-i 忽略大小写的差异</code>、<code>-r 后面可接正则表达式的显示方式</code>。</p>
 <p>​    <code>fing</code>:<code>-mtime n n天之前的的一天之内的被更改过的文件</code>、<code>-mtime +n n天之前被更改的文件名</code>、<code>-mtime -n n天之内被修改的文件名</code></p>
-<p>##vim的一些重要命令</p>
-<h5 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h5><p>​    <code>/word、?word</code>：向下、上查找名为word的字符串。</p>
+<h2 id="vim的一些重要命令"><a href="#vim的一些重要命令" class="headerlink" title="vim的一些重要命令"></a>vim的一些重要命令</h2><h5 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h5><p>​    <code>/word、?word</code>：向下、上查找名为word的字符串。</p>
 <p>​    <code>n\N</code>：<code>n</code>重复前一个查找，<code>N</code>和<code>n</code>反向。</p>
 <p>​    <code>x,X</code>:<code>x</code>向后删除一个字符串，<code>X</code>向前删除一个字符串。</p>
 <p>​    <code>dd</code>:删除光标所在一行。</p>
