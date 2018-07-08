@@ -326,7 +326,7 @@
                 
               
 
-              <time title="创建时间：2018-07-08 19:40:36 / 修改时间：22:44:14" itemprop="dateCreated datePublished" datetime="2018-07-08T19:40:36+08:00">2018-07-08</time>
+              <time title="创建时间：2018-07-08 19:40:36 / 修改时间：22:48:25" itemprop="dateCreated datePublished" datetime="2018-07-08T19:40:36+08:00">2018-07-08</time>
             
 
             
@@ -392,23 +392,24 @@
 <h5 id="whereis、locate、find：文件名的查找"><a href="#whereis、locate、find：文件名的查找" class="headerlink" title="whereis、locate、find：文件名的查找"></a>whereis、locate、find：文件名的查找</h5><p>​    <code>whereis</code>:<code>-b 只找二进制格式</code>、<code>-m 只找在说明文件manual路径下的文件</code>、<code>-s 只找source源文件</code>、<code>-u 查找不在上述三个选项中的特殊文件</code></p>
 <p>​    <code>locate</code>:<code>-i 忽略大小写的差异</code>、<code>-r 后面可接正则表达式的显示方式</code>。</p>
 <p>​    <code>fing</code>:<code>-mtime n n天之前的的一天之内的被更改过的文件</code>、<code>-mtime +n n天之前被更改的文件名</code>、<code>-mtime -n n天之内被修改的文件名</code></p>
-<h2 id="vim的一些重要命令"><a href="#vim的一些重要命令" class="headerlink" title="vim的一些重要命令"></a>vim的一些重要命令</h2><h5 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h5><p>​    <code>/word、?word</code>：向下、上查找名为word的字符串。</p>
-<p>​    <code>n\N</code>：<code>n</code>重复前一个查找，<code>N</code>和<code>n</code>反向。</p>
-<p>​    <code>x,X</code>:<code>x</code>向后删除一个字符串，<code>X</code>向前删除一个字符串。</p>
-<p>​    <code>dd</code>:删除光标所在一行。</p>
-<p>​    <code>ndd</code>:删除光标以下<code>n</code>行。</p>
-<p>​    <code>yy</code>:复制光标那一行。</p>
-<p>​    <code>nyy</code>:复制光标向下<code>n</code>行</p>
-<p>​    <code>u</code>:复原前一个操作。</p>
-<p>​    <code>&#39;Ctrl+r&#39;</code>重做前一个操作。</p>
-<h5 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h5><p>​    <code>i/I、a/A、o/O</code>:进入插入模式。</p>
-<p>​    <code>r/R</code>:进入替换模式。</p>
-<h5 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h5><p>​    <code>:w!</code>强制写入。</p>
-<p>​    <code>:ZZ</code>若文件没有改动，则不保存推出，若文件改动过，保存后推出。</p>
-<p>​    <code>:w[filename]</code>将编辑的数据保存成另一个文件。</p>
-<p>​    <code>:r[filename]</code>将编辑的数据追加到光标的后面。</p>
-<p>​    <code>:n1,n2, w [filename]</code>将n1、n2的内容保存成filename这个文件。</p>
-<p>​    <code>:!command</code>暂时离开vi到命令行。</p>
+<p>##vim的一些重要命令</p>
+<h5 id="一般模式"><a href="#一般模式" class="headerlink" title="一般模式"></a>一般模式</h5><p><code>/word、?word</code>：向下、上查找名为word的字符串。</p>
+<p><code>n\N</code>：<code>n</code>重复前一个查找，<code>N</code>和<code>n</code>反向。</p>
+<p><code>x,X</code>:<code>x</code>向后删除一个字符串，<code>X</code>向前删除一个字符串。</p>
+<p><code>dd</code>:删除光标所在一行。</p>
+<p><code>ndd</code>:删除光标以下<code>n</code>行。</p>
+<p><code>yy</code>:复制光标那一行。</p>
+<p><code>nyy</code>:复制光标向下<code>n</code>行</p>
+<p><code>u</code>:复原前一个操作。</p>
+<p><code>&#39;Ctrl+r&#39;</code>重做前一个操作。</p>
+<h5 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h5><p><code>i/I、a/A、o/O</code>:进入插入模式。</p>
+<p><code>r/R</code>:进入替换模式。</p>
+<h5 id="命令行模式"><a href="#命令行模式" class="headerlink" title="命令行模式"></a>命令行模式</h5><p><code>:w!</code>强制写入。</p>
+<p><code>:ZZ</code>若文件没有改动，则不保存推出，若文件改动过，保存后推出。</p>
+<p><code>:w[filename]</code>将编辑的数据保存成另一个文件。</p>
+<p><code>:r[filename]</code>将编辑的数据追加到光标的后面。</p>
+<p><code>:n1,n2, w [filename]</code>将n1、n2的内容保存成filename这个文件。</p>
+<p><code>:!command</code>暂时离开vi到命令行。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>还有很多东西没有写进去，包括自己之前了解的，以及介绍的命令的很多其他参数。</p>
 <p>先了解这些吧，以后有机会用到了哪个命令，再回头好好看看详细参数。</p>
 <p>讲究实用，用不上记住它完全是浪费时间。</p>
